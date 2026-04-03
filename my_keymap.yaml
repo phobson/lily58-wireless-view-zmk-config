@@ -1,0 +1,179 @@
+layout: {zmk_keyboard: lily58}
+layers:
+  Base:
+  - ESC
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: '$'}
+  - {t: '5', s: '%'}
+  - {t: '6', s: '^'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: '('}
+  - {t: '0', s: ')'}
+  - BSPC
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '-', s: '_'}
+  - LCTRL
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: ';', s: ':'}
+  - {t: '''', s: '"'}
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - 'N'
+  - M
+  - {t: ',', s: '<'}
+  - {t: '.', s: '>'}
+  - {t: '/', s: '?'}
+  - RSHFT
+  - LALT
+  - LGUI
+  - Raise
+  - SPACE
+  - RET
+  - Lower
+  - RIGHT GUI
+  - RALT]
+  Lower:
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - DEL
+  - ''
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - '='
+  - PLUS
+  - MINUS
+  - MULTIPLY
+  - DIVIDE
+  - \
+  - ''
+  - ''
+  - ''
+  - ''
+  - F11
+  - F12
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - (
+  - )
+  - HOME
+  - PAGE DOWN
+  - PAGE UP
+  - END
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - DEL
+  - BSPC
+  - {type: held}
+  - ''
+  - ''
+  Raise:
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - KP 1
+  - KP 2
+  - KP 3
+  - ''
+  - DEL
+  - ''
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '='
+  - KP 4
+  - KP 5
+  - KP 6
+  - PLUS
+  - SUBTRACT
+  - ''
+  - ^
+  - '&'
+  - '*'
+  - '~'
+  - '`'
+  - ''
+  - KP 7
+  - KP 8
+  - KP 9
+  - DIVIDE
+  - MULTIPLY
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - (
+  - )
+  - ''
+  - ''
+  - KP 0
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - DEL
+  - BSPC
+  - ''
+  - ''
+  - ''
