@@ -84,7 +84,7 @@ layers:
   - KP MINUS
   - KP MULTIPLY
   - KP DIVIDE
-  - =
+  - '='
   - ''
   - ''
   - ''
