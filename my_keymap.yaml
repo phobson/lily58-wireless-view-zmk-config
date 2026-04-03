@@ -79,12 +79,12 @@ layers:
   - F8
   - F9
   - F10
-  - '='
+  - '\'
   - KP PLUS
   - KP MINUS
   - KP MULTIPLY
   - KP DIVIDE
-  - \
+  - =
   - ''
   - ''
   - ''
