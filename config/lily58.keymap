@@ -62,11 +62,11 @@
 
             display-name = "Lower";
             bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                                                        &none         &none          &none         &none            &none          &kp DEL
-&none  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10                                                       &kp KP_EQUAL  &kp KP_PLUS    &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp BACKSLASH
-&none  &none   &none   &none   &kp F11  &kp F12                                                       &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT        &none          &none
-&none  &none   &none   &none   &none    &none    &kp KP_LEFT_PARENTHESIS    &kp KP_RIGHT_PARENTHESIS  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END          &none          &none
-                       &none   &none    &none    &kp DEL                    &kp BACKSPACE             &none         &none          &none
+&none  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                                                  &none      &none          &none         &none            &none          &kp DEL
+&none  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10                                                 &kp EQUAL  &kp KP_PLUS    &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp BACKSLASH
+&none  &none   &none   &none   &kp F11  &kp F12                                                 &kp LEFT   &kp DOWN       &kp UP        &kp RIGHT        &none          &none
+&none  &none   &none   &none   &none    &none    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END          &none          &none
+                       &none   &none    &none    &kp DEL                 &kp BACKSPACE          &none      &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
