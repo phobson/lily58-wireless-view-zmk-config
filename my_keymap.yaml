@@ -127,9 +127,9 @@ layers:
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
   - ''
-  - KP 1
-  - KP 2
-  - KP 3
+  - KP 7
+  - KP 8
+  - KP 9
   - ''
   - DEL
   - ''
@@ -151,9 +151,9 @@ layers:
   - '~'
   - '`'
   - ''
-  - KP 7
-  - KP 8
-  - KP 9
+  - KP 1
+  - KP 2
+  - KP 3
   - Sft+KP DIVIDE
   - KP MULTIPLY
   - ''
