@@ -1,66 +1,6 @@
 layout: {zmk_keyboard: lily58}
 layers:
-  Base:
-
-  - ESC
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: '$'}
-  - {t: '5', s: '%'}
-  - {t: '6', s: '^'}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: '('}
-  - {t: '0', s: ')'}
-  - BSPC
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '-', s: '_'}
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - {t: ';', s: ':'}
-  - {t: '''', s: '"'}
-  - LSHFT
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - 'N'
-  - M
-  - {t: ',', s: '<'}
-  - {t: '.', s: '>'}
-  - {t: '/', s: '?'}
-  - RSHFT
-  - LALT
-  - LGUI
-  - Raise
-  - SPACE
-  - RET
-  - Lower
-  - RIGHT GUI
-  - RALT
-  Navigation:
+  Nav:
   - ''
   - F1
   - F2
@@ -115,10 +55,69 @@ layers:
   - ''
   - ''
   - DEL
-  - BSPC
   - {type: held}
   - ''
   - ''
+  - ''
+  Base:
+  - ESC
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: '$'}
+  - {t: '5', s: '%'}
+  - {t: '6', s: '^'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: '('}
+  - {t: '0', s: ')'}
+  - BSPC
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '-', s: '_'}
+  - LCTRL
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: ';', s: ':'}
+  - {t: '''', s: '"'}
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - 'N'
+  - M
+  - {t: ',', s: '<'}
+  - {t: '.', s: '>'}
+  - {t: '/', s: '?'}
+  - RSHFT
+  - LALT
+  - LGUI
+  - LCTRL
+  - SPACE
+  - RET
+  - RCTRL
+  - RIGHT GUI
+  - RALT
   NumFunc:
   - BT CLR
   - {t: BT, h: '0'}
@@ -172,8 +171,8 @@ layers:
   - ''
   - ''
   - ''
+  - ''
   - {type: held}
-  - DEL
   - BSPC
   - ''
   - ''
