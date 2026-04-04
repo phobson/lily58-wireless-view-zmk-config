@@ -60,7 +60,7 @@ layers:
   - Lower
   - RIGHT GUI
   - RALT
-  Raise:
+  Navigation:
   - ''
   - F1
   - F2
@@ -119,7 +119,7 @@ layers:
   - {type: held}
   - ''
   - ''
-  Lower:
+  NumFunc:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
