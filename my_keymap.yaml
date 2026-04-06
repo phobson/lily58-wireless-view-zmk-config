@@ -37,7 +37,7 @@ layers:
   - RIGHT
   - ''
   - DEL
-  - ''
+  - LSHIFT
   - ''
   - ''
   - ''
@@ -50,7 +50,7 @@ layers:
   - PAGE UP
   - END
   - ''
-  - ''
+  - RSHIFT
   - LALT
   - LGUI
   - LCTRL
@@ -131,7 +131,7 @@ layers:
   - KP 9
   - ''
   - DEL
-  - ''
+  - {type: held}
   - '!'
   - '@'
   - '#'
@@ -155,7 +155,7 @@ layers:
   - KP 3
   - Sft+KP DIVIDE
   - KP MULTIPLY
-  - {type: held}
+  - LSHIFT
   - ''
   - '|'
   - ''
@@ -168,7 +168,7 @@ layers:
   - KP 0
   - ''
   - ''
-  - ''
+  - RSHIFT
   - LALT
   - LGUI
   - LCTRL
