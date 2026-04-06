@@ -18,7 +18,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        lf_lshift: hold_tap_lshift {
+        lf_tab: hold_tap_tab {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <500>;
@@ -33,11 +33,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE           &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6     &kp N7         &kp N8     &kp N9   &kp N0    &kp SQT
-&kp TAB             &kp Q   &kp W   &kp E     &kp R     &kp T                                  &kp Y      &kp U          &kp I      &kp O    &kp P     &kp MINUS
-&kp ESC             &kp A   &kp S   &kp D     &kp F     &kp G                                  &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp BSPC
-&lf_lshift 2 LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B      &kp LBKT     &kp RBKT       &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                    &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE    &lt_ret 1 RET  &kp RCTRL  &kp RIGHT_GUI  &kp RALT
+&kp GRAVE       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6     &kp N7         &kp N8     &kp N9   &kp N0    &kp SQT
+&lf_tab 2 TAB   &kp Q   &kp W   &kp E     &kp R     &kp T                                  &kp Y      &kp U          &kp I      &kp O    &kp P     &kp MINUS
+&kp ESC         &kp A   &kp S   &kp D     &kp F     &kp G                                  &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp BSPC
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V     &kp B      &kp LBKT     &kp RBKT       &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE    &lt_ret 1 RET  &kp RCTRL  &kp RIGHT_GUI  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
