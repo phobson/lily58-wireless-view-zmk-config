@@ -18,7 +18,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        lt_rgui: hold_tap_rgui {
+        lt_lgui: hold_tap_lgui {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
