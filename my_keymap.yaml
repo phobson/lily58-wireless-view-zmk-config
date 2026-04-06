@@ -51,14 +51,14 @@ layers:
   - END
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - LALT
+  - LGUI
+  - LCTRL
   - DEL
   - {type: held}
-  - ''
-  - ''
-  - ''
+  - RCTRL
+  - RIGHT GUI
+  - RALT
   Base:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -155,7 +155,7 @@ layers:
   - KP 3
   - Sft+KP DIVIDE
   - KP MULTIPLY
-  - ''
+  - {type: held}
   - ''
   - '|'
   - ''
@@ -169,11 +169,11 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - {type: held}
-  - ''
+  - LALT
+  - LGUI
+  - LCTRL
   - DEL
   - BSPC
-  - ''
-  - ''
-  - ''
+  - RCTRL
+  - RIGHT GUI
+  - RALT
