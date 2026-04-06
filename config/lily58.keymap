@@ -13,7 +13,7 @@
         lt_spc: hold_tap_space {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
@@ -21,7 +21,7 @@
         lt_ret: hold_tap_enter {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
