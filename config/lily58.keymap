@@ -46,11 +46,11 @@
         raise_layer {
             display-name = "Nav";
             bindings = <
-&none   &kp F1     &kp F2   &kp F3  &kp F4   &kp F5                                                  &none          &none          &none         &none            &none          &none
-&none   &kp F6     &kp F7   &kp F8  &kp F9   &kp F10                                                 &kp BACKSLASH  &kp KP_PLUS    &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp EQUAL
-&none   &kp EQUAL  &kp SQT  &none   &kp F11  &kp F12                                                 &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT        &none          &kp DEL
-&trans  &none      &none    &none   &none    &none    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP   &kp END          &none          &trans
-                            &trans  &trans   &trans   &kp DEL                 &none                  &trans         &trans         &trans
+&none   &kp F1     &kp F2   &kp F3         &kp F4   &kp F5                                                  &none     &none          &none        &none      &kp KP_MINUS     &none
+&none   &kp F6     &kp F7   &kp F8         &kp F9   &kp F10                                                 &none     &none          &none        &none      &kp KP_PLUS      &kp EQUAL
+&none   &kp EQUAL  &kp SQT  &kp BACKSLASH  &kp F11  &kp F12                                                 &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp KP_DIVIDE    &kp DEL
+&trans  &none      &none    &none          &none    &none    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp KP_MULTIPLY  &trans
+                            &trans         &trans   &trans   &kp BSPC                &none                  &trans    &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
