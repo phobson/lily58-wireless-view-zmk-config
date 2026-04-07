@@ -11,31 +11,31 @@ layers:
   - ''
   - ''
   - ''
+  - KP MINUS
   - ''
-  -
   - ''
   - F6
   - F7
   - F8
   - F9
   - F10
-  - '\'
+  - ''
+  - ''
+  - ''
+  - ''
   - KP PLUS
-  - KP MINUS
-  - KP MULTIPLY
-  - KP DIVIDE
   - '='
   - ''
   - '='
   - {t: '''', s: '"'}
-  - ''
+  - '\'
   - F11
   - F12
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - ''
+  - KP SLASH
   - DEL
   - LSHIFT
   - ''
@@ -49,7 +49,7 @@ layers:
   - PAGE DOWN
   - PAGE UP
   - END
-  - ''
+  - KP MULTIPLY
   - RSHIFT
   - LALT
   - LGUI
@@ -129,8 +129,8 @@ layers:
   - KP 7
   - KP 8
   - KP 9
+  - KP MINUS
   - ''
-  - DEL
   - {type: held}
   - '!'
   - '@'
@@ -142,7 +142,7 @@ layers:
   - KP 5
   - KP 6
   - KP PLUS
-  - KP SUBTRACT
+  - '='
   - ''
   - ^
   - '&'
@@ -153,8 +153,8 @@ layers:
   - KP 1
   - KP 2
   - KP 3
-  - Sft+KP DIVIDE
-  - KP MULTIPLY
+  - KP SLASH
+  - BSPC
   - LSHIFT
   - ''
   - '|'
@@ -164,10 +164,10 @@ layers:
   - (
   - )
   - ''
-  - ''
   - KP 0
-  - ''
-  - ''
+  - KP 0
+  - '.'
+  - KP MULTIPLY
   - RSHIFT
   - LALT
   - LGUI
