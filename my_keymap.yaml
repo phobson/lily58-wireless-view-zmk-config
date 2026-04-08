@@ -1,5 +1,64 @@
 layout: {zmk_keyboard: lily58}
 layers:
+  Base:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: '$'}
+  - {t: '5', s: '%'}
+  - {t: '6', s: '^'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: '('}
+  - {t: '0', s: ')'}
+  - {t: '\', s: '|'}
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '-', s: '_'}
+  - {t: ESC, h: NumFunc}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: ';', s: ':'}
+  - BSPC
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - N
+  - M
+  - {t: ',', s: '<'}
+  - {t: '.', s: '>'}
+  - {t: '/', s: '?'}
+  - RSHFT
+  - LALT
+  - LGUI
+  - LCTRL
+  - SPACE
+  - {t: RET, h: Nav}
+  - RCTRL
+  - APP
+  - {t: '''', s: '"'}
   Nav:
   - ''
   - F1
@@ -28,16 +87,16 @@ layers:
   - ''
   - '='
   - KP PLUS
-  - KP SLASH
+  - KP DIVIDE
   - KP MINUS
   - F11
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - KP SLASH
+  - KP DIVIDE
   - DEL
-  - LSHIFT
+  - {t: ▽, type: trans}
   - ''
   - ''''
   - KP MULTIPLY
@@ -50,100 +109,41 @@ layers:
   - PAGE UP
   - END
   - KP MULTIPLY
-  - RSHIFT
-  - LALT
-  - LGUI
-  - LCTRL
-  - DEL
-  - {type: held}
-  - RCTRL
-  - APP
-  - {t: '''', s: '"'}
-  Base:
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: '$'}
-  - {t: '5', s: '%'}
-  - {t: '6', s: '^'}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: '('}
-  - {t: '0', s: ')'}
-  - {t: '\', s: '|'}
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '-', s: '_'}
-  - ESC
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - {t: ';', s: ':'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - BSPC
-  - LSHFT
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - 'N'
-  - M
-  - {t: ',', s: '<'}
-  - {t: '.', s: '>'}
-  - {t: '/', s: '?'}
-  - RSHFT
-  - LALT
-  - LGUI
-  - LCTRL
-  - SPACE
-  - RET
-  - RCTRL
-  - APP
-  - {t: '''', s: '"'}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   NumFunc:
   - BT CLR
+  - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: BT, h: '5'}
   - ''
   - KP 7
   - KP 8
   - KP 9
-  - KP MINUS
+  - KP SUBTRACT
   - ''
-  - {type: held}
+  - ''
   - '!'
   - '@'
   - '#'
   - $
   - '%'
-  - ''
+  - '='
   - KP 4
   - KP 5
   - KP 6
   - KP PLUS
   - '='
-  - ''
+  - {type: held}
   - ^
   - '&'
   - '*'
@@ -153,9 +153,9 @@ layers:
   - KP 1
   - KP 2
   - KP 3
-  - KP SLASH
+  - KP DIVIDE
   - BSPC
-  - LSHIFT
+  - {t: ▽, type: trans}
   - ''
   - '|'
   - ''
@@ -166,14 +166,80 @@ layers:
   - ''
   - KP 0
   - KP 0
-  - '.'
+  - .
   - KP MULTIPLY
-  - RSHIFT
-  - LALT
-  - LGUI
-  - LCTRL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - DEL
   - BSPC
-  - RCTRL
-  - APP
-  - {t: '''', s: '"'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Mac:
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - \
+  - '&lf_tab 2 TAB'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - ESC
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - BSPC
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - '['
+  - ']'
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LEFT COMMAND
+  - SPACE
+  - {t: RET, h: Nav}
+  - RIGHT COMMAND
+  - APPLICATION
+  - ''''
+combos:
+- p: [53, 54]
+  k: {t: Mac, h: toggle}
+  l: [Base]
+- p: [53, 54]
+  k: {t: Base, h: toggle}
+  l: [Mac]
