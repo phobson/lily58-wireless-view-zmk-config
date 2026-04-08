@@ -27,10 +27,10 @@ layers:
   - '='
   - ''
   - '='
-  - {t: '''', s: '"'}
-  - '\'
+  - KP PLUS
+  - KP SLASH
+  - KP MINUS
   - F11
-  - F12
   - LEFT
   - DOWN
   - UP
@@ -39,10 +39,10 @@ layers:
   - DEL
   - LSHIFT
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - ''''
+  - KP MULTIPLY
+  - '"'
+  - F12
   - (
   - )
   - HOME
@@ -57,8 +57,8 @@ layers:
   - DEL
   - {type: held}
   - RCTRL
-  - RIGHT GUI
-  - RALT
+  - APP
+  - {t: '''', s: '"'}
   Base:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -71,7 +71,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: '('}
   - {t: '0', s: ')'}
-  - {t: '''', s: '"'}
+  - {t: '\', s: '|'}
   - TAB
   - Q
   - W
@@ -116,8 +116,8 @@ layers:
   - SPACE
   - RET
   - RCTRL
-  - RIGHT GUI
-  - RALT
+  - APP
+  - {t: '''', s: '"'}
   NumFunc:
   - BT CLR
   - {t: BT, h: '1'}
@@ -175,5 +175,5 @@ layers:
   - DEL
   - BSPC
   - RCTRL
-  - RIGHT GUI
-  - RALT
+  - APP
+  - {t: '''', s: '"'}
