@@ -36,7 +36,7 @@ layers:
   - K
   - L
   - {t: ';', s: ':'}
-  - BSPC
+  - {t: '''', s: '"'}
   - LEFT SHIFT
   - Z
   - X
@@ -58,7 +58,7 @@ layers:
   - {t: RET, h: Nav}
   - RCTRL
   - APP
-  - {t: '''', s: '"'}
+  - BSPC
   Nav:
   - ''
   - F1
@@ -190,7 +190,7 @@ layers:
   - '9'
   - '0'
   - \
-  - '&lf_tab 2 TAB'
+  - TAB
   - Q
   - W
   - E
@@ -202,7 +202,7 @@ layers:
   - O
   - P
   - '-'
-  - ESC
+  -  {t: ESC, h: NumFunc}
   - A
   - S
   - D
@@ -213,7 +213,7 @@ layers:
   - K
   - L
   - ;
-  - BSPC
+  - {t: '''', s: '"'}
   - LEFT SHIFT
   - Z
   - X
@@ -235,7 +235,7 @@ layers:
   - {t: RET, h: Nav}
   - RIGHT COMMAND
   - APPLICATION
-  - ''''
+  - BSPC
 combos:
 - p: [53, 54]
   k: {t: Mac, h: toggle}
