@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -54,7 +55,7 @@
         period_and_space: period_and_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD &kp SPACE>;
+            bindings = <&kp DOT &kp SPACE>;
             label = "PERIOD_AND_SPACE";
         };
     };
@@ -65,11 +66,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                          &kp N6     &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSLASH
-&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                           &kp Y      &kp U      &kp I      &kp O    &kp P     &kp MINUS
-&lt_esc 2 ESC   &kp A   &kp S   &kp D     &kp F     &kp G                                           &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V     &kp B      &kp LBKT              &kp RBKT       &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LALT  &kp LGUI  &kp LCTRL  &double_spc_period    &lt_ret 1 RET  &kp RCTRL  &kp K_APP  &kp BSPC
+&kp GRAVE       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                          &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
+&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                           &kp Y      &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&lt_esc 2 ESC   &kp A   &kp S   &kp D     &kp F     &kp G                                           &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V     &kp B      &mkp LCLK             &mkp RCLK      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp LGUI  &kp LCTRL  &double_spc_period    &lt_ret 1 RET  &kp RCTRL  &kp RWIN  &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
