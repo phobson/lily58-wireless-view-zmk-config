@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLE_SPC_PERIOD";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp PERIOD>;
+            bindings = <&kp SPACE>, <&kp PERIOD>, <&period_and_space>;
         };
     };
 
@@ -47,6 +47,15 @@
             bindings = <&to 0>;
             key-positions = <53 54>;
             layers = <3>;
+        };
+    };
+
+    macros {
+        period_and_space: period_and_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp SPACE>;
+            label = "PERIOD_AND_SPACE";
         };
     };
 
