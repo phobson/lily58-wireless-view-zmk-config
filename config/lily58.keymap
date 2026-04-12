@@ -79,11 +79,11 @@
         raise_layer {
             display-name = "Nav";
             bindings = <
-&none   &kp F1     &kp F2            &kp F3           &kp F4             &kp F5                                                  &none                 &none                  &none        &none      &kp KP_MINUS     &none
-&none   &kp F6     &kp F7            &kp F8           &kp F9             &kp F10                                                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LBKT     &kp RBKT   &kp KP_PLUS      &kp EQUAL
-&none   &kp EQUAL  &kp KP_PLUS       &kp KP_DIVIDE    &kp KP_MINUS       &kp F11                                                 &kp LEFT              &kp DOWN               &kp UP       &kp RIGHT  &kp KP_DIVIDE    &kp DEL
-&trans  &none      &kp SINGLE_QUOTE  &kp KP_MULTIPLY  &kp DOUBLE_QUOTES  &kp F12  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp HOME              &kp PAGE_DOWN          &kp PAGE_UP  &kp END    &kp KP_MULTIPLY  &trans
-                                     &trans           &trans             &trans   &kp BSPC                &none                  &trans                &trans                 &trans
+&none   &kp F1     &kp F2            &kp F3           &kp F4             &kp F5                     &none                 &none                  &none        &none      &kp KP_MINUS     &none
+&none   &kp F6     &kp F7            &kp F8           &kp F9             &kp F10                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LBKT     &kp RBKT   &kp KP_PLUS      &kp EQUAL
+&none   &kp EQUAL  &kp KP_PLUS       &kp KP_DIVIDE    &kp KP_MINUS       &kp F11                    &kp LEFT              &kp DOWN               &kp UP       &kp RIGHT  &kp KP_DIVIDE    &kp DEL
+&trans  &none      &kp SINGLE_QUOTE  &kp KP_MULTIPLY  &kp DOUBLE_QUOTES  &kp F12  &trans    &trans  &kp HOME             &kp PAGE_DOWN         &kp PAGE_UP  &kp END    &kp KP_MULTIPLY  &trans
+                                     &trans           &trans             &trans   &kp BSPC  &none   &trans               &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -92,11 +92,11 @@
         lower_layer {
             display-name = "NumFunc";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                 &none      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &none
-&none       &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                                                    &kp EQUAL  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp EQUAL
-&none       &kp CARET     &kp AMPS      &kp ASTERISK  &kp TILDE     &kp GRAVE                                                    &none      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &kp BSPC
-&trans      &none         &kp PIPE      &none         &none         &none         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none      &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_MULTIPLY  &trans
-                                        &trans        &trans        &trans        &kp BSPC                &kp DEL                &trans     &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &none
+&none       &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp EQUAL  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp EQUAL
+&none       &kp CARET     &kp AMPS      &kp ASTERISK  &kp TILDE     &kp GRAVE                       &none      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &kp BSPC
+&trans      &none         &kp PIPE      &none         &none         &none         &trans    &trans  &none      &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_MULTIPLY  &trans
+                                        &trans        &trans        &trans        &kp BSPC  &kp DEL &trans     &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

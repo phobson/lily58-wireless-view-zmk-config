@@ -1,3 +1,4 @@
+
 layout: {zmk_keyboard: lily58}
 layers:
   Base:
@@ -43,8 +44,8 @@ layers:
   - C
   - V
   - B
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - 'LMOUSE'
+  - 'RMOUSE'
   - N
   - M
   - {t: ',', s: '<'}
@@ -102,8 +103,8 @@ layers:
   - KP MULTIPLY
   - '"'
   - F12
-  - (
-  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - HOME
   - PAGE DOWN
   - PAGE UP
@@ -161,8 +162,8 @@ layers:
   - ''
   - ''
   - ''
-  - (
-  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - KP 0
   - KP 0
