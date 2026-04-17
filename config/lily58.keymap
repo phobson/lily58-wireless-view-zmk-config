@@ -35,6 +35,16 @@
 
             tapping-term-ms = <250>;
         };
+
+        ht_ctrl: ht_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CTRL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+        };
     };
 
     combos {
@@ -68,11 +78,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                   &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
-&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                    &kp Y      &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp ESC         &kp A   &kp S   &kp D     &kp F     &kp G                                    &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V     &kp B      &mkp LCLK      &mkp RCLK      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LALT  &kp LGUI  &kp LCTRL  &lt_spc 2 0    &lt_ret 1 RET  &kp RCTRL  &kp RWIN  &kp BSPC
+&kp GRAVE       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                               &kp N6                    &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
+&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                                &kp Y                     &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp ESC         &kp A   &kp S   &kp D     &kp F     &kp G                                                &kp H                     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V     &kp B                  &mkp LCLK      &mkp RCLK      &kp N                     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp LGUI  &ht_ctrl LCTRL DELETE  &lt_spc 2 0    &lt_ret 1 RET  &ht_ctrl RCTRL BACKSPACE  &kp RWIN  &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
