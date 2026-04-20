@@ -55,7 +55,7 @@ layers:
   - LALT
   - LGUI
   - LCTRL
-  - SPACE
+  - {t: SPACE, h: NumFunc}
   - {t: RET, h: Nav}
   - RCTRL
   - APP
@@ -96,7 +96,7 @@ layers:
   - UP
   - RIGHT
   - KP DIVIDE
-  - DEL
+  - ''
   - {t: ▽, type: trans}
   - ''
   - ''''
@@ -113,7 +113,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
   - BSPC
   - {type: held}
   - {t: ▽, type: trans}
@@ -144,7 +144,7 @@ layers:
   - KP 6
   - KP PLUS
   - '='
-  - {type: held}
+  - ''
   - ^
   - '&'
   - '*'
@@ -173,9 +173,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BSPC
+  - {type: held}
   - DEL
-  - {t: ▽, type: trans}
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
