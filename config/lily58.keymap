@@ -89,11 +89,11 @@
         raise_layer {
             display-name = "Nav";
             bindings = <
-&none   &kp F1     &kp F2       &kp F3            &kp F4             &kp F5                               &kp F11               &kp F12           &none                  &none      &none        &none
-&none   &kp F6     &kp F7       &kp F8            &kp F9             &kp F10                              &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RBKT   &kp KP_PLUS  &kp EQUAL
-&none   &kp EQUAL  &kp KP_PLUS  &kp KP_MINUS      &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT              &kp DOWN          &kp UP                 &kp RIGHT  &none        &none
-&trans  &none      &none        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none            &trans      &trans  &kp HOME              &kp PAGE_DOWN     &kp PAGE_UP            &kp END    &none        &trans
-                                &trans            &trans             &kp DEL          &kp BSPC    &none   &trans                &trans            &trans
+&none       &kp F1     &kp F2            &kp F3        &kp F4             &kp F5                               &kp F11               &kp F12           &none                  &none      &none        &none
+&none       &kp F6     &kp F7            &kp F8        &kp F9             &kp F10                              &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RBKT   &kp KP_PLUS  &kp EQUAL
+&none       &kp EQUAL  &kp KP_PLUS       &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT              &kp DOWN          &kp UP                 &kp RIGHT  &none        &none
+&caps_word  &none      &kp SINGLE_QUOTE  &kp UNDER     &kp DOUBLE_QUOTES  &none            &trans      &trans  &kp HOME              &kp PAGE_DOWN     &kp PAGE_UP            &kp END    &none        &caps_word
+                                         &trans        &trans             &kp DEL          &kp BSPC    &none   &trans                &trans            &trans
             >;
         };
 
