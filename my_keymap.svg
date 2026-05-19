@@ -414,14 +414,14 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(350, 266) rotate(30.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-38" width="40" height="68" class="key"/>
-<text x="0" y="-4" class="key tap">RET</text>
+<text x="0" y="-4" class="key tap">SPACE</text>
 <a href="#NumSym">
 <text x="0" y="38" class="key hold layer-activator">NumSym</text>
 </a></g>
 <g transform="translate(574, 266) rotate(-30.0)" class="key keypos-54">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-38" width="40" height="68" class="key"/>
-<text x="0" y="-4" class="key tap">SPACE</text>
+<text x="0" y="-4" class="key tap">RET</text>
 <a href="#NavFuncWrap">
 <text x="0" y="38" class="key hold layer-activator"><tspan style="font-size: 64%">NavFuncWrap</tspan></text>
 </a></g>

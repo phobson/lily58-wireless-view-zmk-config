@@ -54,8 +54,8 @@ layers:
   - LALT
   - LGUI
   - LCTRL
-  - {t: RET, h: NumSym}
-  - {t: SPACE, h: NavFuncWrap}
+  - {t: SPACE, h: NumSym}
+  - {t: RET, h: NavFuncWrap}
   - RCTRL
   - RWIN
   - BSPC
