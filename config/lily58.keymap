@@ -105,7 +105,7 @@
             bindings = <
 &none       &none      &none        &none          &none          &none                                &none             &none                 &none                  &none      &kp LS(DOT)    &none
 &none       &none      &none        &kp SQT        &kp LS(SQT)    &kp GRAVE                            &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RBKT   &kp LS(COMMA)  &trans
-&none       &kp EQUAL  &kp KP_PLUS  &kp KP_DIVIDE  &kp KP_MINUS   &kp KP_MULTIPLY                      &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT  &kp LS(LBKT)   &trans
+&none       &kp EQUAL  &kp KP_PLUS  &kp KP_MINUS   &kp KP_DIVIDE  &kp KP_MULTIPLY                      &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT  &kp LS(LBKT)   &trans
 &caps_word  &none      &none        &kp LS(SEMI)   &kp LS(MINUS)  &kp LS(GRAVE)    &trans      &trans  &kp HOME          &kp PAGE_DOWN         &kp PAGE_UP            &kp END    &kp LS(RBKT)   &trans
                                     &trans         &trans         &kp DEL          &kp BSPC    &none   &trans            &trans                &trans
             >;
