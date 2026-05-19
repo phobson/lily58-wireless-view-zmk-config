@@ -1,19 +1,18 @@
-
 layout: {zmk_keyboard: lily58}
 layers:
   Base:
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: '$'}
-  - {t: '5', s: '%'}
-  - {t: '6', s: '^'}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: '('}
-  - {t: '0', s: ')'}
-  - {t: '\', s: '|'}
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - \
   - TAB
   - Q
   - W
@@ -25,8 +24,8 @@ layers:
   - I
   - O
   - P
-  - {t: '-', s: '_'}
-  - {t: ESC, h: NumFunc}
+  - '-'
+  - {t: ESCAPE, h: Blutoof}
   - A
   - S
   - D
@@ -36,101 +35,101 @@ layers:
   - J
   - K
   - L
-  - {t: ';', s: ':'}
-  - {t: '''', s: '"'}
+  - ;
+  - ''''
   - LEFT SHIFT
   - Z
   - X
   - C
   - V
   - B
-  - 'LMOUSE'
-  - 'RMOUSE'
+  - '&mkp LCLK'
+  - {t: '&mkp RCLK', h: Blutoof}
   - N
   - M
-  - {t: ',', s: '<'}
-  - {t: '.', s: '>'}
-  - {t: '/', s: '?'}
+  - ','
+  - .
+  - /
   - RSHFT
   - LALT
   - LGUI
   - LCTRL
-  - {t: SPACE, h: NumFunc}
-  - {t: RET, h: Nav}
+  - {t: SPACE, h: NumSym}
+  - {t: RET, h: NavFuncWrap}
   - RCTRL
-  - APP
+  - RWIN
   - BSPC
-  Nav:
-  - ''
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F11
-  - F12
+  NavFuncWrap:
   - ''
   - ''
   - ''
   - ''
   - ''
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ">"
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''''
+  - '"'
+  - '`'
+  - '['
   - (
-  - {t: '[', s: '{'}
   - )
-  - {t: ']', s: '}'}
-  - KP PLUS
-  - '='
+  - ']'
+  - "<"
+  - {t: ▽, type: trans}
   - ''
   - '='
-  - KP PLUS
-  - KP MINUS
-  - KP DIVIDE
-  - KP MULTIPLY
+  - "+"
+  - "-"
+  - "/"
+  - "*"
   - LEFT
   - DOWN
   - UP
   - RIGHT
+  - "{"
+  - {t: ▽, type: trans}
+  - '&caps_word'
   - ''
   - ''
-  - CAPS WORD
-  - ''
-  - ''''
-  - '_'
-  - '"'
-  - ''
+  - ":"
+  - "_"
+  - "~"
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - HOME
   - PAGE DOWN
   - PAGE UP
   - END
-  - ''
-  - CAPS WORD
+  - "}"
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DEL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - BSPC
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  NumFunc:
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  NumSym:
   - ''
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP SUBTRACT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - '!'
@@ -138,47 +137,48 @@ layers:
   - '#'
   - $
   - '%'
-  - '='
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
-  - '='
   - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - ''
+  - {t: ▽, type: trans}
   - ^
   - '&'
   - '*'
   - '|'
   - '~'
   - ''
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DIVIDE
-  - BSPC
+  - F5
+  - F6
+  - F7
+  - F8
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
+  - F9
+  - F10
+  - F11
+  - F12
   - ''
-  - ''
-  - ''
-  - '`'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - KP 0
-  - KP 0
-  - .
-  - KP MULTIPLY
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - DEL
-  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - DEL
+
 combos:
-- p: [53, 54]
-  k: {t: M, h: toggle}
-  l: [Base]
+
+- p: [49, 36]
+  k: '&caps_word'
