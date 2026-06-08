@@ -84,6 +84,20 @@
             bindings = <&kp DOT &kp SPACE>;
             label = "PERIOD_AND_SPACE";
         };
+
+        assign_py: assign_py {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
+            label = "ASSIGN_PY";
+        };
+
+        assign_R: assign_R {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp MINUS &kp GREATER_THAN &kp SPACE>;
+            label = "ASSIGN_R";
+        };
     };
 
     keymap {
@@ -92,33 +106,33 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                          &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
-&kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                                           &kp Y      &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&lt_ret 3 ESCAPE  &kp A   &kp S   &kp D     &kp F     &kp G                                           &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z   &kp X   &kp C     &kp V     &kp B      &mkp LCLK          &mouse_ht 3 RCLK  &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                  &kp LALT  &kp LGUI  &kp LCTRL  &lt_spc 2 SPACE    &lt_ret 1 ENTER   &kp RCTRL  &kp RWIN  &kp BSPC
+&kp GRAVE         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                         &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
+&kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                                          &kp Y      &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&lt_ret 3 ESCAPE  &kp A   &kp S   &kp D     &kp F     &kp G                                          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z   &kp X   &kp C     &kp V     &kp B      &mkp LCLK          &mkp RCLK        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                  &kp LALT  &kp LGUI  &kp LCTRL  &lt_spc 2 SPACE    &lt_ret 1 ENTER  &kp RCTRL  &kp RWIN  &kp BSPC
             >;
         };
 
         raise_layer {
             display-name = "NavFuncWrap";
             bindings = <
-&none       &none      &none             &none         &none              &none                                &none             &none                 &none                  &none      &none            &none
-&none       &none      &kp GREATER_THAN  &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RBKT   &none            &trans
-&none       &kp EQUAL  &kp KP_PLUS       &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT  &kp LEFT_BRACE   &trans
-&caps_word  &none      &kp LESS_THAN     &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME          &kp PAGE_DOWN         &kp PAGE_UP            &kp END    &kp RIGHT_BRACE  &trans
-                                         &trans        &trans             &trans           &kp BSPC    &none   &trans            &trans                &trans
+&none       &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR     &kp PERCENT                          &none             &none                  &none              &none            &none  &none
+&none       &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp PIPE       &kp BACKSLASH                        &kp GRAVE         &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE   &none            &none  &trans
+&none       &kp EQUAL        &kp KP_PLUS    &kp KP_MINUS  &kp KP_DIVIDE  &kp KP_MULTIPLY                      &kp LESS_THAN     &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &none  &trans
+&caps_word  &assign_py       &assign_R      &kp UNDER     &kp COLON      &kp TILDE        &trans      &trans  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none  &trans
+                                            &trans        &trans         &kp DEL          &kp BSPC    &none   &trans            &trans                 &trans
             >;
         };
 
         lower_layer {
             display-name = "NumSym";
             bindings = <
-&none   &none            &none          &none         &none       &none                             &none   &none   &none    &none    &none    &none
-&none   &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR  &kp PERCENT                       &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
-&trans  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp PIPE    &kp TILDE                         &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none   &none            &none          &none         &none       &kp BACKSLASH  &trans    &trans   &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
-                                        &trans        &trans      &trans         &none     &kp DEL  &trans  &trans  &kp DEL
+&none   &none   &none   &none    &none    &none                             &none       &none           &none           &none         &none      &kp PRINTSCREEN
+&none   &kp F1  &kp F2  &kp F3   &kp F4   &kp F5                            &none       &none           &none           &none         &none      &none
+&trans  &kp F6  &kp F7  &kp F8   &kp F9   &kp F10                           &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none
+&none   &none   &none   &kp F11  &kp F12  &none    &trans    &trans         &none       &kp HOME        &kp PG_DN       &kp PAGE_UP   &kp END    &none
+                        &trans   &trans   &trans   &none     &kp BACKSPACE  &kp DELETE  &trans          &trans
             >;
         };
 
