@@ -105,6 +105,13 @@
             bindings = <&kp SPACE &kp LESS_THAN &kp MINUS &kp SPACE>;
             label = "ASSIGN_R";
         };
+
+        pipe_R: pipe_R {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp PIPE &kp GREATER_THAN &kp SPACE>;
+            label = "PIPE_R";
+        };
     };
 
     keymap {
@@ -122,24 +129,24 @@
         };
 
         raise_layer {
-            display-name = "NavFuncWrap";
+            display-name = "NavWrapMath";
             bindings = <
-&none       &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR     &kp PERCENT                          &none             &none                  &none              &none            &none  &none
-&none       &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp PIPE       &kp BACKSLASH                        &kp GRAVE         &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE   &none            &none  &trans
-&none       &kp EQUAL        &kp KP_PLUS    &kp KP_MINUS  &kp KP_DIVIDE  &kp KP_MULTIPLY                      &kp LESS_THAN     &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &none  &trans
-&caps_word  &assign_py       &assign_type   &kp UNDER     &kp COLON      &kp TILDE        &trans      &trans  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none  &trans
-                                            &trans        &trans         &kp DEL          &kp BSPC    &none   &trans            &trans                 &trans
+&none       &none          &none             &none         &none              &none                                &none             &none                 &none                  &none              &none  &none
+&none       &kp LESS_THAN  &kp GREATER_THAN  &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none  &trans
+&none       &kp EQUAL      &kp KP_PLUS       &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT          &kp UP_ARROW          &kp DOWN               &kp RIGHT          &none  &trans
+&caps_word  &assign_py     &assign_type      &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME          &kp PAGE_DOWN         &kp PAGE_UP            &kp END            &none  &trans
+                                             &trans        &trans             &none            &kp BSPC    &none   &trans            &trans                &trans
             >;
         };
 
         lower_layer {
-            display-name = "NumSym";
+            display-name = "FuncSym";
             bindings = <
-&none   &none       &none      &none    &none    &none                             &none       &none           &none           &none            &none             &kp PRINTSCREEN
-&none   &kp F1      &kp F2     &kp F3   &kp F4   &kp F5                            &none       &kp LESS_THAN   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &none
-&trans  &kp F6      &kp F7     &kp F8   &kp F9   &kp F10                           &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT         &none
-&none   &assign_py  &assign_R  &kp F11  &kp F12  &none    &trans    &trans         &none       &kp HOME        &kp PG_DN       &kp PAGE_UP      &kp END           &none
-                               &trans   &trans   &trans   &none     &kp BACKSPACE  &kp DELETE  &trans          &trans
+&none   &none       &none      &none    &none    &none                             &none            &none           &none            &none             &none          &kp PRINTSCREEN
+&none   &kp F1      &kp F2     &kp F3   &kp F4   &kp F5                            &kp LESS_THAN    &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &none          &none
+&trans  &kp F6      &kp F7     &kp F8   &kp F9   &kp F10                           &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR        &kp PERCENT    &none
+&none   &assign_py  &assign_R  &kp F11  &kp F12  &pipe_R  &trans    &trans         &kp CARET        &kp AMPERSAND   &kp ASTRK        &kp PIPE          &kp BACKSLASH  &none
+                               &trans   &trans   &trans   &none     &kp BACKSPACE  &kp DELETE       &trans          &trans
             >;
         };
 
