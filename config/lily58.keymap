@@ -22,7 +22,7 @@
         lt_spc: hold_tap_spc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
@@ -60,7 +60,7 @@
         compatible = "zmk,combos";
 
         toggle_mac {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <0 11>;
             layers = <0>;
         };
@@ -68,7 +68,7 @@
         toggle_windows {
             bindings = <&to 0>;
             key-positions = <0 11>;
-            layers = <5>;
+            layers = <4>;
         };
 
         capsword {
@@ -76,10 +76,6 @@
             key-positions = <49 36>;
         };
 
-        magic_hold {
-            bindings = <&mo 4>;
-            key-positions = <57 49>;
-        };
     };
 
     macros {
@@ -155,25 +151,15 @@
             >;
         };
 
-        NumPad {
-            display-name = "Numpad";
-            bindings = <
-            >;
-&trans  &trans  &trans  &trans     &trans    &trans                              &kp BACKSPACE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &kp KP_CLEAR
-&trans  &trans  &trans  &trans     &trans    &trans                              &kp TAB            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_EQUAL
-&trans  &trans  &trans  &trans     &trans    &trans                              &kp SPACE          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_ENTER
-&trans  &trans  &trans  &trans     &trans    &trans            &trans    &trans  &trans             &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_DIVIDE    &kp KP_ENTER
-                        &trans     &trans    &trans            &trans    &trans  &trans             &trans           &trans
-        };
 
         magic {
-            display-name = "Blutoof";
+            display-name = "BlutoofNumbers";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP   &kp C_BRI_UP  &none  &none
-&none       &none         &none         &none         &none         &none                           &kp C_PREV  &kp C_NEXT    &kp C_PLAY_PAUSE  &kp C_BRI_DN  &none  &none
-&none       &none         &none         &none         &none         &none                           &none       &none         &none             &none         &none  &none
-&trans      &none         &none         &none         &none         &none         &trans    &trans  &none       &none         &none             &none         &none  &trans
-                                        &trans        &trans        &trans        &none     &none   &none       &trans        &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4                    &kp BACKSPACE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &kp KP_CLEAR
+&none       &kp C_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP   &kp C_BRI_UP  &none                           &kp TAB            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_EQUAL
+&none       &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE  &kp C_BRI_DN  &none                           &kp SPACE          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_ENTER
+&trans      &none         &none         &none             &none         &none         &trans    &trans  &trans             &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_DIVIDE    &kp KP_ENTER
+                                        &trans            &trans        &trans        &none     &none   &none  &trans  &trans
             >;
         };
 
