@@ -60,7 +60,7 @@
         compatible = "zmk,combos";
 
         toggle_mac {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <0 11>;
             layers = <0>;
         };
@@ -68,12 +68,17 @@
         toggle_windows {
             bindings = <&to 0>;
             key-positions = <0 11>;
-            layers = <4>;
+            layers = <5>;
         };
 
         capsword {
             bindings = <&caps_word>;
             key-positions = <49 36>;
+        };
+
+        magic_hold {
+            bindings = <&mo 4>;
+            key-positions = <57 49>;
         };
     };
 
@@ -122,7 +127,7 @@
             bindings = <
 &kp GRAVE         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                         &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
 &kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                                          &kp Y      &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&lt_ret 3 ESCAPE  &kp A   &kp S   &kp D     &kp F     &kp G                                          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&lt_ret 4 ESCAPE  &kp A   &kp S   &kp D     &kp F     &kp G                                          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT    &kp Z   &kp X   &kp C     &kp V     &kp B      &mkp LCLK          &mkp RCLK        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                                   &kp LALT  &kp LGUI  &kp LCTRL  &lt_spc 2 SPACE    &lt_ret 1 ENTER  &kp RCTRL  &kp RWIN  &kp BSPC
             >;
@@ -150,6 +155,16 @@
             >;
         };
 
+        NumPad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
         magic {
             display-name = "Blutoof";
             bindings = <
@@ -164,11 +179,11 @@
         os_toggle {
             display-name = "Mac";
             bindings = <
-&trans  &trans  &trans  &trans     &trans    &trans                              &trans             &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans                              &trans             &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans                              &trans             &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans            &trans    &trans  &trans             &trans  &trans  &trans  &trans  &trans
-                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &trans    &trans  &kp RIGHT_COMMAND  &trans  &trans
+&trans  &trans  &trans  &trans     &trans    &trans                              &kp BACKSPACE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &kp KP_CLEAR
+&trans  &trans  &trans  &trans     &trans    &trans                              &kp TAB            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_EQUAL
+&trans  &trans  &trans  &trans     &trans    &trans                              &kp SPACE          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_ENTER
+&trans  &trans  &trans  &trans     &trans    &trans            &trans    &trans  &trans             &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_DIVIDE    &kp KP_ENTER
+                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &trans    &trans  &kp RIGHT_COMMAND  &trans           &trans
             >;
         };
     };
