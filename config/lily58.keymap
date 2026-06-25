@@ -156,13 +156,14 @@
         };
 
         NumPad {
+            display-name = "Numpad";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
+&trans  &trans  &trans  &trans     &trans    &trans                              &kp BACKSPACE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &kp KP_CLEAR
+&trans  &trans  &trans  &trans     &trans    &trans                              &kp TAB            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_EQUAL
+&trans  &trans  &trans  &trans     &trans    &trans                              &kp SPACE          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_ENTER
+&trans  &trans  &trans  &trans     &trans    &trans            &trans    &trans  &trans             &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_DIVIDE    &kp KP_ENTER
+                        &trans     &trans    &trans            &trans    &trans  &trans             &trans           &trans
         };
 
         magic {
@@ -179,11 +180,11 @@
         os_toggle {
             display-name = "Mac";
             bindings = <
-&trans  &trans  &trans  &trans     &trans    &trans                              &kp BACKSPACE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SUBTRACT  &kp KP_CLEAR
-&trans  &trans  &trans  &trans     &trans    &trans                              &kp TAB            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_EQUAL
-&trans  &trans  &trans  &trans     &trans    &trans                              &kp SPACE          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &kp KP_ENTER
-&trans  &trans  &trans  &trans     &trans    &trans            &trans    &trans  &trans             &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp PERIOD       &kp KP_DIVIDE    &kp KP_ENTER
-                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &trans    &trans  &kp RIGHT_COMMAND  &trans           &trans
+&trans  &trans  &trans  &trans     &trans    &trans                              &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans    &trans                              &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans    &trans                              &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans    &trans            &trans    &trans  &trans             &trans  &trans  &trans  &trans  &trans
+                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &trans    &trans  &kp RIGHT_COMMAND  &trans  &trans
             >;
         };
     };
