@@ -60,6 +60,8 @@
             label = "DT_BRACKET";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <150>;
         };
 
         dt_paren: dt_paren {
@@ -67,6 +69,8 @@
             label = "DT_PAREN";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+
+            tapping-term-ms = <150>;
         };
 
         dt_brace: dt_brace {
@@ -74,6 +78,8 @@
             label = "DT_BRACE";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+
+            tapping-term-ms = <150>;
         };
 
         dt_angle: dt_angle {
@@ -81,6 +87,8 @@
             label = "DT_ANGLE";
             #binding-cells = <0>;
             bindings = <&kp LESS_THAN>, <&kp RIGHT_BRACE>;
+
+            tapping-term-ms = <150>;
         };
     };
 
