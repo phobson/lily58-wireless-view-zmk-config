@@ -54,6 +54,34 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
         };
+
+        dt_bracket: dt_bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_BRACKET";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        dt_paren: dt_paren {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_PAREN";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        dt_brace: dt_brace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_BRACE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+
+        dt_angle: dt_angle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_ANGLE";
+            #binding-cells = <0>;
+            bindings = <&kp LESS_THAN>, <&kp RIGHT_BRACE>;
+        };
     };
 
     combos {
@@ -131,11 +159,11 @@
         raise_layer {
             display-name = "NavWrapMath";
             bindings = <
-&none   &none       &none         &none         &none              &none                                &none                           &none                                   &none                       &none      &none  &none
-&none   &none       &none         &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt GT LT  &none  &trans
-&none   &kp EQUAL   &kp KP_PLUS   &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT                        &kp DOWN                                &kp UP_ARROW                &kp RIGHT  &none  &trans
-&trans  &assign_py  &assign_type  &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME                        &kp PAGE_DOWN                           &kp PAGE_UP                 &kp END    &none  &trans
-                                  &trans        &trans             &trans           &kp BSPC    &none   &trans                          &trans                                  &trans
+&none   &none       &none         &none         &none              &none                                &none        &none          &none         &none      &none  &none
+&none   &none       &none         &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &dt_bracket  &dt_paren      &dt_brace     &dt_angle  &none  &trans
+&none   &kp EQUAL   &kp KP_PLUS   &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT     &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none  &trans
+&trans  &assign_py  &assign_type  &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME     &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &none  &trans
+                                  &trans        &trans             &trans           &kp BSPC    &none   &trans       &trans         &trans
             >;
         };
 
