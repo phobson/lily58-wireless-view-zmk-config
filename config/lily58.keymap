@@ -60,7 +60,7 @@
         compatible = "zmk,combos";
 
         toggle_mac {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <0 11>;
             layers = <0>;
         };
@@ -68,7 +68,7 @@
         toggle_windows {
             bindings = <&to 0>;
             key-positions = <0 11>;
-            layers = <4>;
+            layers = <5>;
         };
 
         capsword {
@@ -112,6 +112,34 @@
             bindings = <&kp SPACE &kp PIPE &kp GREATER_THAN &kp SPACE>;
             label = "PIPE_R";
         };
+
+        assign_walrus: assign_walrus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp COLON &kp EQUAL &kp SPACE>;
+            label = "ASSIGN_WALRUS";
+        };
+
+        less_equal: less_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp LESS_THAN &kp EQUAL &kp SPACE>;
+            label = "LESS_EQUAL";
+        };
+
+        greater_equal: greater_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp GREATER_THAN &kp EQUAL &kp SPACE>;
+            label = "GREATER_EQUAL";
+        };
+
+        right_arrow: right_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp MINUS &kp GREATER_THAN &kp SPACE>;
+            label = "RIGHT_ARROW";
+        };
     };
 
     keymap {
@@ -122,7 +150,7 @@
             bindings = <
 &kp GRAVE         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                         &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSLASH
 &kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                                          &kp Y      &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&lt_ret 3 ESCAPE  &kp A   &kp S   &kp D     &kp F     &kp G                                          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&lt_ret 4 ESCAPE  &kp A   &kp S   &kp D     &kp F     &kp G                                          &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT    &kp Z   &kp X   &kp C     &kp V     &kp B      &mkp LCLK          &mkp RCLK        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                                   &kp LALT  &kp LGUI  &kp LCTRL  &lt_spc 2 SPACE    &lt_ret 1 ENTER  &kp RCTRL  &kp RWIN  &kp BSPC
             >;
@@ -131,22 +159,32 @@
         raise_layer {
             display-name = "NavWrapMath";
             bindings = <
-&none   &none       &none         &none         &none              &none                                &none                           &none                                   &none                       &none      &none  &none
-&none   &none       &none         &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt GT LT  &none  &trans
-&none   &kp EQUAL   &kp KP_PLUS   &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT                        &kp DOWN                                &kp UP_ARROW                &kp RIGHT  &none  &trans
-&trans  &assign_py  &assign_type  &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME                        &kp PAGE_DOWN                           &kp PAGE_UP                 &kp END    &none  &trans
-                                  &trans        &trans             &trans           &kp BSPC    &none   &trans                          &trans                                  &trans
+&none   &none           &none         &none         &none              &none                                &none                  &none                 &none             &none              &none  &none
+&none   &assign_walrus  &none         &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none  &trans
+&none   &kp EQUAL       &kp KP_PLUS   &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT               &kp DOWN              &kp UP_ARROW      &kp RIGHT          &none  &trans
+&trans  &assign_py      &assign_type  &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME               &kp PAGE_DOWN         &kp PAGE_UP       &kp END            &none  &trans
+                                      &trans        &trans             &trans           &kp BSPC    &none   &trans                 &trans                &trans
             >;
         };
 
         lower_layer {
             display-name = "FuncSym";
             bindings = <
-&none   &none            &none        &none     &none       &none                           &none      &none          &none     &none          &none  &kp PRINTSCREEN
-&trans  &kp F1           &kp F2       &kp F2    &kp F4      &kp F5                          &kp F6     &kp F7         &kp F8    &kp F9         &none  &none
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                     &kp CARET  &kp AMPERSAND  &kp PIPE  &kp BACKSLASH  &none  &none
-&trans  &assign_R        &pipe_R      &kp F10   &kp F11     &kp F12      &trans    &trans   &none      &none          &none     &none          &none  &trans
-                                      &trans    &trans      &trans       &none     &kp DEL  &trans     &trans         &trans
+&none   &none            &none        &none        &none           &none                            &none      &none          &none     &none          &none         &kp PRINTSCREEN
+&trans  &kp F1           &kp F2       &kp F2       &kp F4          &kp F5                           &kp F6     &kp F7         &kp F8    &kp F9         &none         &none
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR      &kp PERCENT                      &kp CARET  &kp AMPERSAND  &kp PIPE  &kp BACKSLASH  &kp QUESTION  &none
+&trans  &assign_R        &pipe_R      &less_equal  &greater_equal  &right_arrow  &trans    &trans   &none      &kp F10        &kp F11   &kp F12        &none         &trans
+                                      &trans       &trans          &trans        &none     &kp DEL  &trans     &trans         &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans     &trans                          &trans    &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans     &trans                          &kp STAR  &kp N5  &kp N8  &kp N9  &kp EQUAL  &trans
+&none   &trans  &trans  &trans  &trans     &trans                          &kp PLUS  &kp N4  &kp N5  &kp N6  &kp RET    &trans
+&trans  &trans  &trans  &trans  &trans     &trans   &trans      &trans     &kp FSLH  &kp N1  &kp N2  &kp N3  &kp RET    &trans
+                        &trans  &kp SPACE  &kp TAB  &kp BSPC    &kp MINUS  &kp DOT   &kp N0  &kp N0
             >;
         };
 
