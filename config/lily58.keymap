@@ -180,11 +180,11 @@
 
         NumFunc {
             bindings = <
-&trans  &trans  &trans  &trans   &trans     &trans                          &trans        &trans        &trans        &trans     &trans     &trans
-&trans  &trans  &kp F1  &kp F2   &kp F3     &kp F4                          &kp N7        &kp N8        &kp N9        &kp MINUS  &kp EQUAL  &trans
-&none   &trans  &kp F5  &kp F6   &kp F7     &kp F8                          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp RET    &trans
-&trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans      &trans     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &kp RET    &trans
-                        &trans   &kp SPACE  &kp TAB  &kp BSPC    &kp SPACE  &kp N0        &kp N0        &kp ASTERISK
+&trans  &trans  &trans  &trans   &trans     &trans                               &trans        &trans        &trans        &trans     &trans     &trans
+&trans  &trans  &kp F1  &kp F2   &kp F3     &kp F4                               &kp N7        &kp N8        &kp N9        &kp MINUS  &kp EQUAL  &trans
+&none   &trans  &kp F5  &kp F6   &kp F7     &kp F8                               &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp RET    &trans
+&trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans       &trans         &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &kp RET    &trans
+                        &trans   &kp SPACE  &kp TAB  &kp SPACE    &kp BACKSPACE  &kp N0        &kp N0        &kp PERIOD
             >;
         };
 
