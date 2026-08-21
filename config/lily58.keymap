@@ -159,11 +159,11 @@
         raise_layer {
             display-name = "NavWrapMath";
             bindings = <
-&none   &none           &none         &none         &none              &none                                &none          &none                 &none             &none           &none  &none
-&none   &assign_walrus  &none         &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &none  &trans
-&none   &kp EQUAL       &kp KP_PLUS   &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT       &kp DOWN              &kp UP_ARROW      &kp RIGHT       &none  &trans
-&trans  &assign_py      &assign_type  &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME       &kp PAGE_DOWN         &kp PAGE_UP       &kp END         &none  &trans
-                                      &trans        &trans             &trans           &kp BSPC    &none   &trans         &trans                &trans
+&none   &none           &none            &none              &none                  &none                                 &none          &none                 &none             &none           &none              &none
+&none   &assign_walrus  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN                      &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp GRAVE          &trans
+&none   &kp EQUAL       &kp KP_PLUS      &kp KP_MINUS       &kp KP_DIVIDE          &kp KP_MULTIPLY                       &kp LEFT       &kp DOWN              &kp UP_ARROW      &kp RIGHT       &kp DOUBLE_QUOTES  &trans
+&trans  &assign_py      &assign_type     &kp UNDER          &kp COLON              &kp TILDE         &trans      &trans  &kp HOME       &kp PAGE_DOWN         &kp PAGE_UP       &kp END         &kp SQT            &trans
+                                         &trans             &trans                 &trans            &kp BSPC    &none   &trans         &trans                &trans
             >;
         };
 
@@ -180,11 +180,11 @@
 
         NumFunc {
             bindings = <
-&trans  &trans  &trans  &trans   &trans     &trans                               &none   &kp EQUAL     &kp KP_DIVIDE &kp KP_MULTIPLY   &kp KP_MINUS  &trans   
-&trans  &trans  &kp F1  &kp F2   &kp F3     &kp F4                               &none   &kp N7        &kp N8        &kp N9            &kp KP_PLUS   &trans
-&none   &trans  &kp F5  &kp F6   &kp F7     &kp F8                               &none   &kp N4        &kp N5        &kp N6            &kp RET       &trans 
-&trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans       &trans         &none   &kp N1        &kp N2        &kp N3            &kp RET       &trans  
-                        &trans   &kp SPACE  &kp TAB  &kp SPACE    &kp BACKSPACE  &kp N0  &kp N0        &kp PERIOD
+&trans  &trans  &trans  &trans   &trans     &trans                               &none   &kp EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
+&trans  &trans  &kp F1  &kp F2   &kp F3     &kp F4                               &none   &kp N7     &kp N8         &kp N9           &kp KP_PLUS   &trans
+&none   &trans  &kp F5  &kp F6   &kp F7     &kp F8                               &none   &kp N4     &kp N5         &kp N6           &kp RET       &trans
+&trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans       &trans         &none   &kp N1     &kp N2         &kp N3           &kp RET       &trans
+                        &trans   &kp SPACE  &kp TAB  &kp SPACE    &kp BACKSPACE  &kp N0  &kp N0     &kp PERIOD
             >;
         };
 
