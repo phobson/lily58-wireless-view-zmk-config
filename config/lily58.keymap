@@ -64,6 +64,93 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
         };
+
+        hold_tap_math: hold_tap_math {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            bindings = <&mathspaces_helper>, <&kp>;
+            flavor = "hold-preferred";
+        };
+
+        mod_paren: mod_paren {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>, <&kp LS(N0)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mod_angle: mod_angle {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA)>, <&kp LS(DOT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mod_bracket: mod_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mod_brace: mod_brace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LBKT)>, <&kp LS(RBKT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_assign: math_assign {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&mathspaces_helper EQUAL>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_sum: math_sum {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(EQUAL)>, <&mathspaces_helper LS(EQUAL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_difference: math_difference {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&mathspaces_helper MINUS>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_geom: math_geom {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>, <&mathspaces_helper LS(N8)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_fraction: math_fraction {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&mathspaces_helper FSLH>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_and: math_and {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&mathspaces_helper LS(N7)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        math_or: math_or {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(BSLH)>, <&mathspaces_helper LS(BSLH)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+
     };
 
     combos {
@@ -137,6 +224,19 @@
             label = "LESS_EQUAL";
         };
 
+        // surround operators in spaces
+        mathspaces_helper: mathspaces_helper {
+            label = "&MATHSPACES_HELPER";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            tap-ms = <30>;
+            wait-ms = <15>;
+            bindings = <&kp SPACE>
+                , <&macro_param_1to1>
+                , <&kp MACRO_PLACEHOLDER>
+                , <&kp SPACE>;
+        };
+
         greater_equal: greater_equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -169,11 +269,11 @@
         raise_layer {
             display-name = "NavWrapMath";
             bindings = <
-&none   &none           &none         &none         &none              &none                                &none                             &none                                         &none                                 &none                             &none  &none
-&none   &assign_walrus  &none         &kp SQT       &kp DOUBLE_QUOTES  &kp GRAVE                            &ht_wraps GREATER_THAN LESS_THAN  &ht_wraps RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht_wraps RIGHT_BRACKET LEFT_BRACKET  &ht_wraps RIGHT_BRACE LEFT_BRACE  &none  &trans
-&none   &kp EQUAL       &kp KP_PLUS   &kp KP_MINUS  &kp KP_DIVIDE      &kp KP_MULTIPLY                      &kp LEFT                          &kp DOWN                                      &kp UP_ARROW                          &kp RIGHT                         &none  &trans
-&trans  &assign_py      &assign_type  &kp UNDER     &kp COLON          &kp TILDE        &trans      &trans  &kp HOME                          &kp PAGE_DOWN                                 &kp PAGE_UP                           &kp END                           &none  &trans
-                                      &trans        &trans             &trans           &kp BSPC    &none   &trans                            &trans                                        &trans
+&none      &none           &none         &none             &none              &none                                       &none       &none         &none       &none   &none   &none
+&none      &assign_walrus  &pipe_R       &kp SQT           &kp DOUBLE_QUOTES  &kp GRAVE                              &mod_angle  &mod_paren  &mod_bracket  &mod_brace   &none   &none
+&none      &math_assign    &math_sum     &math_difference  &math_fraction     &math_geom                               &kp LEFT    &kp DOWN        &kp UP   &kp RIGHT   &none   &none
+&caps_word &assign_R       &assign_type  &kp UNDER         &kp COLON          &kp TILDE        &trans      &trans      &kp HOME   &kp PG_DN     &kp PG_UP     &kp END   &none  &trans
+                                         &trans            &trans             &trans           &kp BSPC    &none       &trans     &trans           &trans
             >;
         };
 
@@ -182,24 +282,24 @@
             bindings = <
 &none   &none            &none        &none     &none       &none                           &none             &none                  &none              &none            &none         &kp PRINTSCREEN
 &trans  &none            &none        &kp SQT   &kp DQT     &kp GRAVE                       &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none         &none
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                     &kp CARET         &kp AMPERSAND          &kp PIPE           &kp BACKSLASH    &kp QUESTION  &none
-&trans  &assign_R        &pipe_R      &none     &none       &none        &trans    &trans   &none             &none                  &less_equal        &greater_equal   &none         &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                     &kp CARET         &math_and              &math_or           &kp BACKSLASH    &kp QUESTION  &none
+&trans  &assign_R        &pipe_R      &none     &none       &none        &trans    &trans   &less_than        &greater_than          &less_equal        &greater_equal   &none         &trans
                                       &trans    &trans      &trans       &none     &kp DEL  &trans            &trans                 &trans
             >;
         };
 
         NumFunc {
             bindings = <
-&trans  &trans  &trans  &trans   &trans     &trans                               &none   &kp EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
-&trans  &trans  &kp F1  &kp F2   &kp F3     &kp F4                               &none   &kp N7     &kp N8         &kp N9           &kp KP_PLUS   &trans
-&none   &trans  &kp F5  &kp F6   &kp F7     &kp F8                               &none   &kp N4     &kp N5         &kp N6           &kp RET       &trans
-&trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans       &trans         &none   &kp N1     &kp N2         &kp N3           &kp RET       &trans
+&trans  &trans  &trans  &trans   &trans     &trans                                      &none   &none    &none    &none      &kp KP_PLUS   &none
+&trans  &trans  &kp F1  &kp F2   &kp F3     &kp F4                                  &kp EQUAL  &kp N7   &kp N8   &kp N9     &kp KP_MINUS   &none
+&none   &trans  &kp F5  &kp F6   &kp F7     &kp F8                               &kp KP_ENTER  &kp N4   &kp N5   &kp N6     &kp KP_SLASH   &none
+&trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans       &trans         &kp KP_ENTER  &kp N1   &kp N2   &kp N3  &kp KP_MULTIPLY  &trans
                         &trans   &kp SPACE  &kp TAB  &kp SPACE    &kp BACKSPACE  &kp N0  &kp N0     &kp PERIOD
             >;
         };
 
         magic {
-            display-name = "BlutoofNumbers";
+            display-name = "Blutoof";
             bindings = <
 &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4                     &none   &none   &none   &none  &none  &none
 &none   &kp C_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP   &kp C_BRI_UP  &none                            &none   &none   &none   &none  &none  &none
