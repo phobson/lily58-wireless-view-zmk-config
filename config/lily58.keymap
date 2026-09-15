@@ -244,6 +244,24 @@
             label = "GREATER_EQUAL";
         };
 
+        greater_than: greater_than {
+            label = "&GREATER_THAN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>
+                , <&kp LS(DOT)>
+                , <&kp SPACE>;
+        };
+
+        less_than: less_than {
+            label = "&LESS_THAN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>
+                , <&kp LS(COMMA)>
+                , <&kp SPACE>;
+        };
+
         right_arrow: right_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
