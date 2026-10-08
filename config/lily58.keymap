@@ -137,48 +137,46 @@
         };
 
         math_bang: math_bang {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(N1)>, <&mathspaces_helper LS(N1)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         math_at: math_at {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(N2)>, <&mathspaces_helper LS(N2)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         math_pound: math_pound {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(N3)>, <&mathspaces_helper LS(N3)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-
         math_money: math_money {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(N4)>, <&mathspaces_helper LS(N4)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         math_pct: math_pct {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(N5)>, <&mathspaces_helper LS(N5)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         math_caret: math_caret {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(N6)>, <&mathspaces_helper LS(N6)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
 
         math_and: math_and {
             compatible = "zmk,behavior-mod-morph";
@@ -195,14 +193,14 @@
         };
 
         math_bslh: math_bslh {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSLH>, <&mathspaces_helper BSLH>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         math_Q: math_Q {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&mathspaces_helper QUESTION>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
