@@ -365,6 +365,8 @@
 &trans  &trans  &kp F9  &kp F10  &kp F11    &kp F12  &trans       &trans         &kp KP_ENTER  &kp N1  &kp N2      &kp N3  &kp KP_MULTIPLY  &trans
                         &trans   &kp SPACE  &kp TAB  &kp SPACE    &kp BACKSPACE  &kp N0        &kp N0  &kp PERIOD
             >;
+
+            label = "NumPad";
         };
 
         magic {
